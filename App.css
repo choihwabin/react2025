@@ -1,0 +1,31 @@
+*{margin: 0; padding: 0;}
+
+.App{
+  background: #ff0;
+}
+.App > h2{
+  color: #f00;
+  text-align: center;
+}
+body{margin-left: 10px;}
+h3{color: #00f; margin-bottom: 10px;  border-bottom:3px solid rgb(0, 0, 255,.6);}
+.title3{color: #f00; margin: 30px 0px; text-align: center;}
+ul, ol, dl{
+  margin-bottom: 20px;
+  line-height: 30px;
+  margin-left: 40px;
+}
+dt{font-weight: bold; color: green;}
+li, p, dd{transition: 0.3s; font-size: 14px;}
+li:hover, p:hover, dd:hover{color:#333; background: rgba(130, 209, 255, 0.6);} 
+p{line-height: 20px; margin-bottom: 20px; margin-left: 30px;}
+
+.footer{
+  background: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+address{font-style: normal;}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_자바스크립트(object)_배열(array)</title>
+</head>
+<body>
+  <h2>01_자바스크립트(object)_배열(array)</h2>
+  <p>자바스크립트 객체는 키(key)와 값(value)으로 구성되어 있다.</p>
+  <p>배열 데이터는 1개 또는 여러개의 쌍으로 구성된다.</p>
+  <p>값(value)은 숫자나 문자열 뿐만 아니라 또 다른 객체(object)를 넣을 수 있다.</p>
+
+  <script>
+    const car = new Object(); // 객체생성
+    car.type='현대자동차';
+    car.model='소나타';
+    car.color='흰색';
+
+    //객체를 호출하여 내용 출력
+    document.write('내가 선택한 자동차 회사는 ' +car.type+ '이고 모델명은 ' +car.model+'이며 색상은 ' + car.color + '입니다.<br>');
+  
+    const car2 = { //객체 생성 두번째 방법
+      type:'현대자동차',
+      model:'소나타',
+      color:'흰색'
+    }
+
+   //객체를 호출하여 내용 출력
+    document.write('내가 선택한 자동차 회사는 ' +car2.type+ '이고 모델명은 ' +car2.model+'이며 색상은 ' + car2.color + '입니다.<br>');
+  </script>
+
+  <h3>1. 객체를 복사하는 방법</h3>
+  <ol>
+    <li>Shallow Copy</li>
+    <li>Deep + Shallow Copy</li>
+    <li>Deep Copy</li>
+  </ol>
+  <script>
+    //객체를 복사하는 방법 첫번째
+    let grandeur ={engine:'가솔린', cc:3000}; //기존 객체를 만들고
+    let aa = {name:'kildong', age:30, car:grandeur}; //새로운 객체에 기존 객체를 넣음.
+    // let bb = aa; // aa객체 내용을 grandeur객체의 속성값을 넣어서 복사
+
+    // console.log(Object.is(aa,bb)); //속성값이 맞는지 비교 검사 true
+    // console.log('테스트하기');
+    // console.log(Object.is(aa.car, bb.car)); //true
+
+
+    //두번째 방법 - 객체를 복사하지만 하위객체는 참조만 하는 방법(가장 많이 사용)
+    // let bb = Object.assign({}, aa); //Object Deep Copy, 하위 Object Shallow Copy
+    // let bb ={...aa}; //스프레드 연산자(spread)
+    // console.log(Object.is(aa,bb)); // false
+    // console.log(Object.is(aa.car, bb.car)); //true
+
+    //세번째 방법 - Deep Copy : 대표객체 뿐만 아니라 하위객체도 깊은 복사를 하는 방법
+    //단점: 가장 많은 메모리와 늦은 처리속도를 보이기 때문에 3가지 객체복사 방법 중 제일 느리다.
+    let bb = JSON.parse(JSON.stringify(aa));
+    //stringify()함수 : 자바스크립트 값을 json문자열로 변환해주는 함수
+    console.log(Object.is(aa,bb)); // false
+    console.log(Object.is(aa.car, bb.car)); // false
+
+
+    //1. 객체 복사하기 (Shallow Copy)
+    let animals1 = ['사자', '호랑이'];
+    // let animals2 = animals1;
+    // console.log(animals1);
+    // console.log(animals2);
+    // console.log(Object.is(animals1, animals2)); //true 복사가 정상적으로 완료
+
+    //2. 사본 만들기 (Deep Copy), Object.assign()함수
+    // let animals2 = Object.assign([], animals1);
+    // console.log(animals1);
+    // console.log(animals2);
+    
+    //3. 스프레드 연산자로 복사하기 - 바로 위 결고와 같다.
+    // let animals2 = [...animals1];
+    // console.log(animals1);
+    // console.log(animals2);
+
+    //4. deep copy, map
+    let animals2 = animals1.map((value,index)=>'index is ' + index + ' value is ' + value);
+    console.log(animals1);
+    console.log(animals2);
+  </script>
+
+</body>
+</html>
