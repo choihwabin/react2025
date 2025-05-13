@@ -1,0 +1,13 @@
+
+[
+{"CODE":"91","NAME":"지마켓","AREA1":"서울","AREA2":"강남구","AREA3":"대치동","BOOK_CNT":"100","OWNER_NUM":"대치점","TEL_NUM":"02-1234-5678"},
+{"CODE":"92","NAME":"yes24","AREA1":"서울","AREA2":"용산구","AREA3":"한남동","BOOK_CNT":"123","OWNER_NUM":"한남점","TEL_NUM":"02-1234-6363"},
+{"CODE":"93","NAME":"교보문고","AREA1":"서울","AREA2":"종로구","AREA3":"구기동","BOOK_CNT":"64","OWNER_NUM":"구기점","TEL_NUM":"02-634-3453"},
+{"CODE":"94","NAME":"11번가","AREA1":"경기","AREA2":"분당","AREA3":"서현동","BOOK_CNT":"80","OWNER_NUM":"서현점","TEL_NUM":"031-1243-1521"},
+{"CODE":"95","NAME":"알라딘","AREA1":"인천","AREA2":"계양구","AREA3":"계양동","BOOK_CNT":"42","OWNER_NUM":"계양점","TEL_NUM":"031-123-1212"},
+{"CODE":"96","NAME":"인터파크","AREA1":"강원","AREA2":"홍천","AREA3":"길동","BOOK_CNT":"13","OWNER_NUM":"길동점","TEL_NUM":"033-1232-5423"},
+{"CODE":"97","NAME":"지마켓","AREA1":"123","AREA2":"123","AREA3":"123","BOOK_CNT":"123","OWNER_NUM":"123","TEL_NUM":"123"},
+{"CODE":"98","NAME":"알라딘","AREA1":"서울","AREA2":"용산구","AREA3":"한남동","BOOK_CNT":"1","OWNER_NUM":"한남점","TEL_NUM":"02-784-0411"},
+{"CODE":"132","NAME":"","AREA1":"","AREA2":"","AREA3":"","BOOK_CNT":"","OWNER_NUM":"","TEL_NUM":""}
+]
+
